@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start|top"
+    android:orientation="vertical"
+    android:background="@drawable/backgroung">
+
+
+    <TextView
+        android:id="@+id/textViewWarn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="Как пользоваться"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/continueuni"
+        android:layout_width="220dp"
+
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="10dp"
+
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+
+        android:background="@drawable/btn_sign_in"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Продолжить"
+        android:textColor="@color/btn_click_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/continueuni"
+        android:layout_below="@+id/textViewWarn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-61dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-70dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="80dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/missionTxt"
+            android:textColor="@color/helperText"
+            android:textSize="24sp"></TextView>
+    </ScrollView>
+
+</RelativeLayout>

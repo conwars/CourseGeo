@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766973774663",
+    "project_id": "coursegeoapp",
+    "storage_bucket": "coursegeoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766973774663:android:00db560efb4452f7e4da62",
+        "android_client_info": {
+          "package_name": "com.example.coursegeo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766973774663-ctmluk6qfsiaopr13hgjl3l0ni0sk2am.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-KcVSSlLj9wvA2IekFbJXdRygLQTYkJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766973774663-ctmluk6qfsiaopr13hgjl3l0ni0sk2am.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

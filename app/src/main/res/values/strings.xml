@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">CourseGeo</string>
+    <string name="header_name">Приложение для тестирования</string>
+    <string name="app_name_after">Register App</string>
+    <string name="btn_sign_in">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="text_bottom">Войдите в свою учётную запись</string>
+    <string name="title_activity_navigate">navigateActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Настройки</string>
+    <string name="course_name">Предмет</string>
+    <string name="course_name2">ОБЖ</string>
+    <string name="course_name5">Английский язык</string>
+    <string name="chapter">Глава 1</string>
+    <string name="results">Результаты</string>
+    <string name="mission1">- Никогда не переходите язык по неизвестным ссылкам в письме от неизвестных людей. В таких письмах обычно содержится сообщение о крупном выигрыше, подтверждение перевода, легком заработке денежных средств и т.п.\n- Даже если e-mail отправителя не вызывает подозрений, это не гарантия безопасности письма. Существует возможность подменять e-mail отправителя (например, сделать его похожим на уже известный), чтобы обмануть получателя.\n- Жулики пишут броские заголовки, порой большими буквами, дабы взволновать адресата и побудить его поскорее кликнуть на письмо, например, «ВЫ ВЫИГРАЛИ В ЛОТЕРЕЮ».\n- Установи качественный антивирус во избежание заражения почты. Чтобы понять, стоит ли открывать письмо, посмотри на его заголовок и адрес отправителя. Спроси себя: «Действительно ли оно для меня?».\n- Не нажимай на ссылки и не смотри вложения в письме. Задача мошенников – заставить тебя запустить зараженный файл (с целью кражи твоих персональных данных, получения доступа к паролям и т.д.).\n- Если в чем-то сомневаешься, посоветуйся с взрослыми.\n- Всегда проверяйте незнакомые сайты через поисковик.Например: razvod.ru отзывы</string>
+
+
+    <string name="chapter1">Глава 1. Человек и среда...</string>
+    <string name="chapter2">Глава 2. Опасные ситуации...</string>
+    <string name="chapter3">Глава 3. Опасные ситуации...</string>
+    <string name="chapter4">Глава 4. Чрезвычайные сит...</string>
+    <string name="chapter5">Глава 5. Опасные ситуации...</string>
+    <string name="chapter6">Глава 6. Экстремиз и терро...</string>
+    <string name="chapter7">Глава 7. Возрастные особен...</string>
+    <string name="chapter8">Глава 8. Факторы, разруша...</string>
+
+    <string name="point1">1.1. Город как среда обитания</string>
+    <string name="point2">1.2. Жилища человека, осо...</string>
+    <string name="point3">1.3. Особенности природн...</string>
+    <string name="point4">1.4. Взаимоотношения люд...</string>
+    <string name="point5">1.5. Безопасность в повсед...</string>
+
+    <string name="missionTxt">В этом задании нужно переместить 1 вариант ответа в зону где расположен текст задания!\n В дальнейщем, чтобы узнать как выполнить задание, нужно нажать в правом углу кнопку со знаком «Вопрос»\n Отвечать на вопросы нужно пока вы не выберите правильный ответ!\n После выбранного правильного ответа нажмите кнопку «Далее»</string>
+    <string name="helperHightxt">Задание на подстановку текста</string>
+    <string name="helper2Hightxt">Задание на восстановление соотвествия</string>
+    <string name="helper3Hightxt">Задание на подстановку текста\n (Выбор нескольких вариантов ответа)</string>
+    <string name="helperMaintxt">В этом задании нужно переместить 1 вариант ответа в зону где расположен текст задания!</string>
+    <string name="helper2Maintxt">В этом задании нужно выбрать одну кнопку из левого ряда и сравнить её с кнопкой из правого ряда!</string>
+    <string name="helper3Maintxt">В этом задании нужно переместить 2 варианта ответа в зону где расположен текст задания!</string>
+
+    <string name="menu_home">Главное меню</string>
+    <string name="logout">Выйти</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+</resources>

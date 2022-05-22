@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung"
+    tools:context=".tests.testTasks1">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/tool_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.CourseGeo.PopupOverlay" />
+
+    <ImageButton
+        android:id="@+id/back_pressed2"
+        android:layout_width="49dp"
+        android:layout_height="56dp"
+
+        android:layout_marginStart="4dp"
+        android:background="#00000000"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_arrow_back"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnHelper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="345dp"
+
+
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="6dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_ques"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/total_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/dropdrag"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="115dp"-->
+<!--        android:layout_above="@+id/choices_layout"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="99dp"-->
+<!--        android:layout_marginEnd="112dp"-->
+<!--        android:layout_marginBottom="19dp"-->
+<!--        android:src="@drawable/circledd"-->
+<!--        android:tag="dropdrag" />-->
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="377dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/choices_layout"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/textbckng"
+        android:fontFamily="@font/fira_sans"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/choices_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="221dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ans_A"
+            android:layout_width="160dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:tag="ans_A"
+            android:text="Ans A"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/ans_B"
+            android:layout_width="160dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="35dp"
+            android:background="@color/white"
+            android:tag="ans_B"
+            android:text="Ans B"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choices_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="134dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ans_C"
+            android:layout_width="160dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:tag="ans_C"
+            android:text="Ans C"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/ans_D"
+            android:layout_width="160dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="35dp"
+            android:background="@color/white"
+            android:tag="ans_D"
+            android:text="Ans D"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/textbckng"
+        android:text="Далее"
+        android:textColor="@color/btn_text_color" />
+
+
+</RelativeLayout>
