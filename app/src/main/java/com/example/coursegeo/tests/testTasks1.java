@@ -44,9 +44,9 @@ public class testTasks1 extends AppCompatActivity implements View.OnClickListene
         int totalQuestion = QuestionAnswer.question.length;
         int currentQuestionIndex = 0;
 
-@SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
-@Override
-protected void onCreate(Bundle savedInstanceState) {
+        @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_tasks1);
 
@@ -60,7 +60,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
         LayoutInflater inflater = (LayoutInflater) getLayoutInflater();
         View customView = inflater.inflate(R.layout.mission, null);
-// Build the dialog
+        // Build the dialog
         customDialog = new Dialog(this, R.style.CustomDialog);
         customDialog.setContentView(customView);
 
@@ -127,16 +127,22 @@ protected void onCreate(Bundle savedInstanceState) {
         @Override
         public void onClick(View view) {
 
-        ansA.setBackgroundColor(Color.WHITE);
-        ansB.setBackgroundColor(Color.WHITE);
-        ansC.setBackgroundColor(Color.WHITE);
-        ansD.setBackgroundColor(Color.WHITE);
-
         Button clickedButton = (Button) view;
         if (clickedButton.getId() == R.id.submit_btn) {
-                currentQuestionIndex = currentQuestionIndex + 2;
-                loadNewQuestion();
+                if (correct == 1) {
+//                currentQuestionIndex = currentQuestionIndex + 2;
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        int wrong1 = save.getInt("Score1", 0);
+                        SharedPreferences.Editor editor = save.edit();
+                        editor.putInt("Score1", wrong);
+                        editor.commit();
+                        finishQuiz();
+                        System.out.println(correct);
+                } else {
+                        Toast.makeText(testTasks1.this, "Нужно выбрать правильный ответ!", Toast.LENGTH_SHORT).show();
+                }
         }
+
 
  }
 
@@ -154,21 +160,21 @@ public boolean onTouch(View v, MotionEvent event) {
 
 
         switch (v.getId()) {
-        case R.id.ans_A:
-        case R.id.ans_B:
-        case R.id.ans_C:
-        case R.id.ans_D:
+           case R.id.ans_A:
+           case R.id.ans_B:
+           case R.id.ans_C:
+           case R.id.ans_D:
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-        v.startDragAndDrop(data, mShadow, null, 0);
+                v.startDragAndDrop(data, mShadow, null, 0);
         } else {
-        v.startDrag(data, mShadow, null, 0);
+          v.startDrag(data, mShadow, null, 0);
         }
 
-        break;
+           break;
         }
-        return false;
+          return false;
         }
 
 @Override
@@ -176,12 +182,12 @@ public boolean onDrag(View v, DragEvent event) {
         switch (event.getAction()) {
         case DragEvent.ACTION_DRAG_STARTED:
 
-        v.invalidate();
+          v.invalidate();
         return true;
 
         case DragEvent.ACTION_DRAG_ENTERED:
 
-        String clipData = event.getClipDescription().getLabel().toString();
+          String clipData = event.getClipDescription().getLabel().toString();
 
         switch (clipData) {
                 case "ans_A":
@@ -207,6 +213,7 @@ public boolean onDrag(View v, DragEvent event) {
         clipData = event.getClipDescription().getLabel().toString();
 
         answers = clipData;
+                System.out.println(answers);
 
         v.invalidate();
         return true;
@@ -214,46 +221,68 @@ public boolean onDrag(View v, DragEvent event) {
 
         case DragEvent.ACTION_DRAG_ENDED:
 
-        ansA.setBackgroundColor(Color.WHITE);
-        ansB.setBackgroundColor(Color.WHITE);
-        ansC.setBackgroundColor(Color.WHITE);
-        ansD.setBackgroundColor(Color.WHITE);
-
         if (event.getResult()) {
                 if (currentQuestionIndex == 0) {
         switch (answers) {
         case "ans_A":
-                ansA.setBackgroundColor(Color.RED);
-                Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                score--;
-                wrong++;
+                if (ansA.getText().toString().equals(QuestionAnswer.correctAnswers[0])) {
+                        ansA.setBackgroundColor(Color.GREEN);
+                        Toast.makeText(testTasks1.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                        correct++;
+                        currentQuestionIndex++;
+                        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+                        currentQuestionIndex--;
+                } else {
+                        ansA.setBackgroundColor(Color.RED);
+                        Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                        score--;
+                        wrong++;
+                }
                 break;
         case "ans_B":
-                ansB.setBackgroundColor(Color.GREEN);
-                Toast.makeText(testTasks1.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                correct++;
-                currentQuestionIndex++;
-                questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
-                currentQuestionIndex--;
-                SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-                int wrong1 = save.getInt("Score1",0);
-                        SharedPreferences.Editor editor = save.edit();
-                        editor.putInt("Score1",wrong);
-                        editor.commit();
-
-
+                if (ansB.getText().toString().equals(QuestionAnswer.correctAnswers[0])) {
+                        ansB.setBackgroundColor(Color.GREEN);
+                        Toast.makeText(testTasks1.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                        correct++;
+                        currentQuestionIndex++;
+                        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+                        currentQuestionIndex--;
+                } else {
+                        ansB.setBackgroundColor(Color.RED);
+                        Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                        score--;
+                        wrong++;
+                }
                 break;
         case "ans_C":
-                ansC.setBackgroundColor(Color.RED);
-                Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                score--;
-                wrong++;
+                if (ansC.getText().toString().equals(QuestionAnswer.correctAnswers[0])) {
+                        ansC.setBackgroundColor(Color.GREEN);
+                        Toast.makeText(testTasks1.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                        correct++;
+                        currentQuestionIndex++;
+                        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+                        currentQuestionIndex--;
+                } else {
+                        ansC.setBackgroundColor(Color.RED);
+                        Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                        score--;
+                        wrong++;
+                }
                 break;
         case "ans_D":
-                ansD.setBackgroundColor(Color.RED);
-                Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                score--;
-                wrong++;
+                if (ansD.getText().toString().equals(QuestionAnswer.correctAnswers[0])) {
+                        ansD.setBackgroundColor(Color.GREEN);
+                        Toast.makeText(testTasks1.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                        correct++;
+                        currentQuestionIndex++;
+                        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+                        currentQuestionIndex--;
+                } else {
+                        ansD.setBackgroundColor(Color.RED);
+                        Toast.makeText(testTasks1.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                        score--;
+                        wrong++;
+                }
                 break;
         }
 
@@ -283,27 +312,10 @@ default:
         }
 
         void finishQuiz() {
-                if (score == 5) {
-                        passtatus = 5;
 
-                } else if (score == 4) {
-                        passtatus = 4;
-
-                } else if (score == 3) {
-                        passtatus = 3;
-
-                } else if (score == 2) {
-                        passtatus = 2;
-
-                }
 
         Intent resultIntent = new Intent(testTasks1.this, testTaks3.class);
-//        resultIntent.putExtra("correct", correct);
-//        resultIntent.putExtra("wrong", wrong);
-//        resultIntent.putExtra("score", passtatus);
-
         startActivity(resultIntent);
         finish();
-
         }
-  }
+}

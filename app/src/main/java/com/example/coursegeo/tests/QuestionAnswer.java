@@ -12,11 +12,7 @@ public class QuestionAnswer {
     };
 
     public static String correctAnswers[] = {
-            "ans_B",
-            "ans_C",
-            "ans_D",
-            "ans_B",
-            "ans_B"
+            "12 тыс. жителей"
     };
 
     public static String question2[] ={
@@ -47,5 +43,10 @@ public class QuestionAnswer {
 
     public static String choices3[][] = {
             {"1 миллион","Больше 1 миллиона","Меньше 1 миллиона","Большим","Маленьким","Средним"},
+    };
+
+    public static String correctAnswers3[] = {
+            "Больше 1 миллиона",
+            "Большим"
     };
 }

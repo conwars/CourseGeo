@@ -22,7 +22,6 @@ public class GameOverScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameover_screen);
 
-        final AppCompatButton startNewQuiz = findViewById(R.id.startNewQuizBTN);
         final AppCompatButton GoToMainMenu = findViewById(R.id.GoToMainMenuBTN);
 //        final TextView correctAnswers = findViewById(R.id.txtRightAnsContent);
         final TextView wrongAnswers = findViewById(R.id.txtWrongAnsContent);
@@ -38,13 +37,6 @@ public class GameOverScreen extends AppCompatActivity {
 
 
 
-        startNewQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(GameOverScreen.this, testTasks1.class));
-                finish();
-            }
-        });
 
         GoToMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override

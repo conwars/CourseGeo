@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         users = db.getReference("Users");
 
-        btnRegister.setOnClickListener(new View.OnClickListener() { // Обработчик событий кнопки батОн регистер
+        btnRegister.setOnClickListener(new View.OnClickListener() { // Обработчик событий кнопки button register
             @Override
             public void onClick(View view) {
                 showRegisterWindow();
             }
         });
-        btnSignIn.setOnClickListener(new View.OnClickListener() { // Обработчик событий кнопки батОн регистер
+        btnSignIn.setOnClickListener(new View.OnClickListener() { // Обработчик событий кнопки button register
             @Override
             public void onClick(View view) {
                 showSignInWindow();
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setTitle("Войти");
         dialog.setMessage("Введите данные для входа");
 
-        LayoutInflater inflater = LayoutInflater.from(this); // Создали объект на основе класса LayoutInflater ( Для получения шаблона sign_in виндоу)
+        LayoutInflater inflater = LayoutInflater.from(this); // Создали объект на основе класса LayoutInflater ( Для получения шаблона sign_in window)
         View sign_in_window = inflater.inflate(R.layout.sign_in_window, null);  // Получение шаблона . Шаблон идёт на основе класс view.
         dialog.setView(sign_in_window); // setView позволяет установить внутренний шаблон
 
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setMessage("Введите все данные для регистриграции");
 
 
-        LayoutInflater inflater = LayoutInflater.from(this); // Создали объект на основе класса LayoutInflater ( Для получения шаблона регистер виндоу)
+        LayoutInflater inflater = LayoutInflater.from(this); // Создали объект на основе класса LayoutInflater ( Для получения шаблона регистер window)
         View register_window = inflater.inflate(R.layout.register_window, null);  // Получение шаблона . Шаблон идёт на основе класс view.
         dialog.setView(register_window); // setView позволяет установить внутренний шаблон
 
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 auth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
-                            public void onSuccess(AuthResult authResult) {   // Обработчик события, который вызовет онСаксек только в том случае, если у нас пользователь был успешно добавлен в бд
+                            public void onSuccess(AuthResult authResult) {   // Обработчик события, который вызовет onSuccess только в том случае, если у нас пользователь был успешно добавлен в бд
                                 User user = new User();
                                 user.setEmail(email.getText().toString());
                                 user.setName(name.getText().toString());

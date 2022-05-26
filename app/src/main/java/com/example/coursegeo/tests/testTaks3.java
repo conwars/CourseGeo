@@ -104,31 +104,26 @@ public class testTaks3 extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
-        ansA.setBackgroundColor(Color.WHITE);
-        ansB.setBackgroundColor(Color.WHITE);
-        ansC.setBackgroundColor(Color.WHITE);
-        ansD.setBackgroundColor(Color.WHITE);
-        ansE.setBackgroundColor(Color.WHITE);
-        ansF.setBackgroundColor(Color.WHITE);
-
         Button clickedButton = (Button) view;
         if (clickedButton.getId() == R.id.submit_btn) {
+                if (correct == 2) {
 
+                SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                int wrong1 = save.getInt("Score1",0);
 
-            SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-            int wrong1 = save.getInt("Score1",0);
+                int result = wrong1 + wrong2;
+                SharedPreferences save2 = getSharedPreferences("Save", MODE_PRIVATE);
+                int result1 = save2.getInt("Score1",0);
 
+                SharedPreferences.Editor editor = save2.edit();
 
-            int result = wrong1 + wrong2;
-            SharedPreferences save2 = getSharedPreferences("Save", MODE_PRIVATE);
-            int result1 = save2.getInt("Score1",0);
+                editor.putInt("Score1",result);
+                editor.commit();
 
-            SharedPreferences.Editor editor = save2.edit();
-
-            editor.putInt("Score1",result);
-            editor.commit();
-
-            finishQuiz();
+                finishQuiz();
+            } else {
+                    Toast.makeText(testTaks3.this, "Нужно выбрать правильный ответ!", Toast.LENGTH_SHORT).show();
+                }
         }
     }
 
@@ -221,66 +216,161 @@ public class testTaks3 extends AppCompatActivity implements View.OnClickListener
                     if (currentQuestionIndex == 0) {
                         switch (answers) {
                             case "ans_A":
-                                ansA.setBackgroundColor(Color.RED);
-                                Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                                score--;
-                                wrong2++;
+                                if (ansA.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansA.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansA.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansA.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
+                                } else {
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansA.setBackgroundColor(Color.RED);
+                                }
                                 break;
                             case "ans_B":
-                                ansB.setBackgroundColor(Color.GREEN);
-                                Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                                correct++;
-                                green1 = 1;
-                                currentQuestionIndex++;
-                                if(green2 == 0){
-                                    questionTextView.setText(QuestionAnswer.question3[currentQuestionIndex]);
+                                if (ansB.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansB.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansB.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansB.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
                                 } else {
-                                    currentQuestionIndex = currentQuestionIndex + 2;
-                                    questionTextView.setText(QuestionAnswer.question3[currentQuestionIndex]);
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansB.setBackgroundColor(Color.RED);
                                 }
-                                currentQuestionIndex--;
                                 break;
                             case "ans_C":
-                                ansC.setBackgroundColor(Color.RED);
-                                Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                                score--;
-
-                                wrong2++;
+                                if (ansC.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansC.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansC.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansC.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
+                                } else {
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansC.setBackgroundColor(Color.RED);
+                                }
                                 break;
                             case "ans_D":
-                                ansD.setBackgroundColor(Color.GREEN);
-                                Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                                correct++;
-                                green2 = 1;
-                                currentQuestionIndex = currentQuestionIndex + 2;
-                                if(green1 == 0){
-                                    questionTextView.setText(QuestionAnswer.question3[currentQuestionIndex]);
+                                if (ansD.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansD.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansD.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansD.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
                                 } else {
-                                    currentQuestionIndex++;
-                                    questionTextView.setText(QuestionAnswer.question3[currentQuestionIndex]);
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansD.setBackgroundColor(Color.RED);
                                 }
-                                currentQuestionIndex = currentQuestionIndex - 2;
                                 break;
                             case "ans_E":
-                                ansE.setBackgroundColor(Color.RED);
-                                Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                                score--;
-                                wrong2++;
+                                if (ansE.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansE.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansE.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansE.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
+                                } else {
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansE.setBackgroundColor(Color.RED);
+                                }
                                 break;
                             case "ans_F":
-                                ansF.setBackgroundColor(Color.RED);
-                                Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
-                                score--;
-                                wrong2++;
+                                if (ansF.getText().toString().equals(QuestionAnswer.correctAnswers3[0])) {
+                                    questionTextView.setText(QuestionAnswer.question3[1]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansF.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green1 = 1;
+                                    setxtx2();
+                                } else if (ansF.getText().toString().equals(QuestionAnswer.correctAnswers3[1])) {
+                                    questionTextView.setText(QuestionAnswer.question3[2]);
+                                    Toast.makeText(testTaks3.this, "Правильно!", Toast.LENGTH_SHORT).show();
+                                    ansF.setBackgroundColor(Color.GREEN);
+                                    correct++;
+                                    green2 = 1;
+                                    setxtx1();
+                                } else {
+                                    Toast.makeText(testTaks3.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                                    score--;
+                                    wrong2++;
+                                    ansF.setBackgroundColor(Color.RED);
+                                }
                                 break;
                         }
                     }
                 }
+
                 return true;
             default:
                 return false;
         }
     }
+
+
+    void setxtx1() {
+    if(green1 == 1) {
+        questionTextView.setText(QuestionAnswer.question3[3]);
+        }
+    }
+
+    void setxtx2() {
+        if(green2 == 1) {
+            questionTextView.setText(QuestionAnswer.question3[3]);
+        }
+    }
+
+
 
 
     void loadNewQuestion() {
@@ -298,24 +388,8 @@ public class testTaks3 extends AppCompatActivity implements View.OnClickListener
     }
 
     void finishQuiz() {
-//        if (score == 5) {
-//            passtatus = 5;
-//        } else if (score == 4) {
-//            passtatus = 4;
-//        } else if (score == 3) {
-//            passtatus = 3;
-//        } else if (score == 2) {
-//            passtatus = 2;
-//        }
-
-
         Intent resultIntent = new Intent(testTaks3.this, testTasks2.class);
-//        resultIntent.putExtra("correct", correct);
-//        resultIntent.putExtra("wrong", wrong);
-//        resultIntent.putExtra("score", passtatus);
-
         startActivity(resultIntent);
         finish();
-
     }
 }
