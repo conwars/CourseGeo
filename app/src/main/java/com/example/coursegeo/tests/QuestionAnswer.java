@@ -1,5 +1,7 @@
 package com.example.coursegeo.tests;
 
+import java.util.List;
+
 public class QuestionAnswer {
 
     public static String question[] ={
@@ -33,6 +35,7 @@ public class QuestionAnswer {
             "до 500-1 млн жителей",
             "свыше 1 млн жителей"}
     };
+
 
     public static String question3[] ={
             "Вставьте пропущенные в тексте слова:\n «В моём городе проживает ______ жителей. Он относится к ______ городам Российской Федерации»",

@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,7 +55,6 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_test_tasks2);
 
 
-
         totalQuestionsTextView2 = findViewById(R.id.total_question2);
         questionTextView2 = findViewById(R.id.question2);
         ansA2 = findViewById(R.id.ans_A2);
@@ -72,8 +70,8 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
         ansK2 = findViewById(R.id.ans_K2);
         ansL2 = findViewById(R.id.ans_L2);
         submitBtn2 = findViewById(R.id.submit_btn2);
-//
-//
+
+
         submitBtn2.setOnClickListener(this);
         ansA2.setOnClickListener(this);
         ansB2.setOnClickListener(this);
@@ -129,7 +127,6 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                 }
                 clickA = 1;
 
-
                         if(greenA == 0) {
 
                             Button ansI = (Button) findViewById(R.id.ans_I2);
@@ -140,9 +137,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                                         ansA.setBackgroundColor(Color.GREEN);
                                         ansI.setBackgroundColor(Color.GREEN);
                                         ansB2.setBackgroundColor(Color.WHITE);
+                                        correct++;
                                         greenA = 1;
                                         clickA = 0;
-
                                     }
                                 }
                             });
@@ -239,9 +236,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                                 ansB.setBackgroundColor(Color.GREEN);
                                 ansL.setBackgroundColor(Color.GREEN);
                                 ansC2.setBackgroundColor(Color.WHITE);
+                                correct++;
                                 greenB = 1;
                                 clickA = 0;
-
                             }
                         }
                     });
@@ -324,9 +321,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                                 ansC.setBackgroundColor(Color.GREEN);
                                 ansJ.setBackgroundColor(Color.GREEN);
                                 ansD2.setBackgroundColor(Color.WHITE);
+                                correct++;
                                 greenC = 1;
                                 clickA = 0;
-
                             }
                         }
                     });
@@ -394,9 +391,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                                 ansD.setBackgroundColor(Color.GREEN);
                                 ansK.setBackgroundColor(Color.GREEN);
                                 ansE2.setBackgroundColor(Color.WHITE);
+                                correct++;
                                 greenD = 1;
                                 clickA = 0;
-
                             }
                         }
                     });
@@ -450,9 +447,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                                 ansE.setBackgroundColor(Color.GREEN);
                                 ansG.setBackgroundColor(Color.GREEN);
                                 ansF2.setBackgroundColor(Color.WHITE);
+                                correct++;
                                 greenE = 1;
                                 clickA = 0;
-
                             }
                         }
                     });
@@ -488,9 +485,9 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
                             if (greenF == 0) {
                                 ansF.setBackgroundColor(Color.GREEN);
                                 ansH.setBackgroundColor(Color.GREEN);
+                                correct++;
                                 greenF = 1;
                                 clickA = 0;
-
                             }
                         }
                     });
@@ -509,20 +506,17 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         Button clickedButton = (Button) view;
         if (clickedButton.getId() == R.id.submit_btn2) {
-            currentQuestionIndex++;
+            if (correct == 6) {
 
-            SharedPreferences save2 = getSharedPreferences("Save", MODE_PRIVATE);
-            int result1 = save2.getInt("Score1",0);
+                currentQuestionIndex++;
+                SharedPreferences save2 = getSharedPreferences("Save", MODE_PRIVATE);
+                int result1 = save2.getInt("Score1", 0);
 
-            allscore = result1 + wrong;
-
+                allscore = result1 + wrong;
+                finishQuiz();
+            }
         }
-        finishQuiz();
     }
-
-
-
-
 
     void loadNewQuestion() {
 
