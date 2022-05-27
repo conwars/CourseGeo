@@ -37,7 +37,6 @@ public class testTasks1 extends AppCompatActivity implements View.OnClickListene
         ScrollView myScroll;
 
         String answers;
-        int passtatus = 0;
         int score = 5;
         int wrong = 0;
         int correct = 0;
@@ -298,11 +297,6 @@ default:
 
         void loadNewQuestion() {
 
-        if (currentQuestionIndex == totalQuestion) {
-        finishQuiz();
-        return;
-        }
-
         questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
         ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
         ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
@@ -312,7 +306,6 @@ default:
         }
 
         void finishQuiz() {
-
 
         Intent resultIntent = new Intent(testTasks1.this, testTaks3.class);
         startActivity(resultIntent);

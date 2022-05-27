@@ -237,18 +237,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
-        <!--        <androidx.appcompat.widget.AppCompatButton-->
-        <!--            android:id="@+id/startNewQuizBTN"-->
-        <!--            android:layout_width="156dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="30dp"-->
-        <!--            android:layout_marginRight="30dp"-->
-        <!--            android:background="@drawable/textbckng"-->
-        <!--            android:text="Начать новую викторину"-->
-        <!--            android:textColor="@color/btn_text_color">-->
-
-        <!--        </androidx.appcompat.widget.AppCompatButton>-->
-
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton

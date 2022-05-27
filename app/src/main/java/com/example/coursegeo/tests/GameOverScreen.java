@@ -23,15 +23,14 @@ public class GameOverScreen extends AppCompatActivity {
         setContentView(R.layout.activity_gameover_screen);
 
         final AppCompatButton GoToMainMenu = findViewById(R.id.GoToMainMenuBTN);
-//        final TextView correctAnswers = findViewById(R.id.txtRightAnsContent);
+
         final TextView wrongAnswers = findViewById(R.id.txtWrongAnsContent);
         final TextView scoreResults = findViewById(R.id.txtTotalScore);
 
-//        final int getCorrectAnswers = getIntent().getIntExtra("correct", 0);
+
         final int getWrongAnswers = getIntent().getIntExtra("wrong", 0);
         final int getScoreResults = getIntent().getIntExtra("score", 0);
 
-//        correctAnswers.setText(String.valueOf(getCorrectAnswers));
         wrongAnswers.setText(String.valueOf(getWrongAnswers));
         scoreResults.setText((String.valueOf(getScoreResults)));
 

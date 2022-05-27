@@ -35,7 +35,6 @@ public class testTaks3 extends AppCompatActivity implements View.OnClickListener
     Dialog customDialog;
 
     String answers;
-    int passtatus = 0;
     int wrong2 = 0;
     int score = 5;
     int correct = 0;

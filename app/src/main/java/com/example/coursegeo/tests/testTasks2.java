@@ -33,9 +33,7 @@ public class testTasks2 extends AppCompatActivity implements View.OnClickListene
     boolean check2 = false;
     boolean check3 = false;
     boolean check4 = false;
-    boolean check5 = false;
     int passtatus = 0;
-    int score = 5;
     int wrong = 0;
     int correct = 0;
     int allscore = 0;
