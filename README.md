@@ -14,3 +14,5 @@ mission.xml - экран перед началом теста, который о
 файлы activity_obj_test.xml и geographyTest отвечают за экран с главами рабочей тетради
 
 файлы activity_obj_test_menu.xml и objTestMenu отвечают за экран с тестами
+
+Приложение запускалось на эмуляторе Android Studio Pixel 3a API 30 // Android version R 11.0 x86 
