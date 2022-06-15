@@ -34,21 +34,29 @@
         app:srcCompat="@drawable/ic_arrow_back"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textTESTNAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/point1"
+        android:textColor="@color/white"
+        android:textFontWeight="800"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"></TextView>
+
     <ImageButton
         android:id="@+id/btnHelper"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/toolbar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="345dp"
-
-
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="4dp"
         android:background="#00000000"
+        android:minWidth="50dp"
+        android:minHeight="56dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,21 +68,19 @@
         android:id="@+id/total_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
 
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="377dp"
-        android:layout_height="200dp"
-        android:layout_above="@id/choices_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="222dp"
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="44dp"
         android:background="@drawable/textbckng"
         android:fontFamily="@font/fira_sans"
         android:padding="5dp"
@@ -85,27 +91,27 @@
 
     <LinearLayout
         android:id="@+id/choices_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/submit_btn"
+        android:layout_below="@+id/question"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="221dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="17dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/ans_A"
             android:layout_width="160dp"
             android:layout_height="75dp"
-            android:layout_marginLeft="20dp"
+            android:background="@color/white"
             android:tag="ans_A"
             android:text="Ans A"
             android:textAllCaps="false"
-            android:background="@color/white"
-            android:textSize="14sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/ans_B"
@@ -116,28 +122,27 @@
             android:tag="ans_B"
             android:text="Ans B"
             android:textAllCaps="false"
-            android:textSize="14sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/choices_layout2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/submit_btn"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="134dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="221dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/ans_C"
             android:layout_width="160dp"
             android:layout_height="75dp"
-            android:layout_marginLeft="20dp"
             android:background="@color/white"
             android:tag="ans_C"
             android:text="Ans C"

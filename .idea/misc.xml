@@ -14,16 +14,22 @@
         <entry key="..\:/CourseGeo/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2355" />
         <entry key="..\:/CourseGeo/app/src/main/res/drawable/side_nav_bar.xml" value="0.2355" />
         <entry key="..\:/CourseGeo/app/src/main/res/drawable/textbckng.xml" value="0.209" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-1920x1080/activity_test_taks3.xml" value="0.36666666666666664" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-1920x1080/activity_test_tasks1.xml" value="0.36666666666666664" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-1920x1080/activity_test_tasks2.xml" value="0.36666666666666664" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-large/activity_test_tasks1.xml" value="0.23307291666666666" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-normal/activity_obj_test.xml" value="0.36666666666666664" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout-normal/activity_test_tasks1.xml" value="0.36666666666666664" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_gameover_screen.xml" value="0.33" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_geography_test.xml" value="0.36666666666666664" />
-        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_map.xml" value="0.358695652173913" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_navigate.xml" value="0.358695652173913" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_obj_test.xml" value="0.36666666666666664" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_obj_test_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_taks3.xml" value="0.36666666666666664" />
-        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_tasks1.xml" value="0.36666666666666664" />
-        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_tasks2.xml" value="0.36666666666666664" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_taks3.xml" value="0.33" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_tasks1.xml" value="0.33" />
+        <entry key="..\:/CourseGeo/app/src/main/res/layout/activity_test_tasks2.xml" value="0.33" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/app_bar_navigate.xml" value="0.25" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/content_navigate.xml" value="0.358695652173913" />
         <entry key="..\:/CourseGeo/app/src/main/res/layout/course_item.xml" value="0.35260416666666666" />
